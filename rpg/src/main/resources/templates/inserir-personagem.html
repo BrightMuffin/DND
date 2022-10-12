@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Inserir personagem</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1>Crie um novo Personagem!</h1>
+		</div>
+
+		<div class="row">
+			<div class="col-lg3">
+				<a th:href="@{/personagem}" class="btn btn-primary">Voltar</a>
+			</div>
+			<div class="row">
+				<form method="post" th:action="@{/personagem/inserir}" th:object="${personagem}">
+					<div class="mb-3">
+						<label for="txtNivel" class="form-label">Nível:
+							</label> <input type="text" class="form-control"
+							id="txtNivel" aria-describedby="emailHelp" th:field="*{nivel}">
+				
+					</div>
+					<div class="mb-3">
+						<label for="txtNome" class="form-label">Nome:</label>
+						<input type="text" class="form-control"
+							id="txtNome" th:field="*{nome}">
+					</div>
+					<div class="mb-3">
+						<label for="txtClasse" class="form-label">Classe:</label>
+						<input type="text" class="form-control"
+							id="txtClasse" th:field="*{classe}">
+					</div>
+					<div class="mb-3">
+						<label for="txtStr" class="form-label">Força:</label>
+						<input type="text" class="form-control"
+							id="txtStr" th:field="*{str}">
+					</div>
+					<div class="mb-3">
+						<label for="txtDex" class="form-label">Destreza:</label>
+						<input type="text" class="form-control"
+							id="txtDex" th:field="*{dex}">
+					</div>
+					<div class="mb-3">
+						<label for="txtCon" class="form-label">Constituição:</label>
+						<input type="text" class="form-control"
+							id="txtCon" th:field="*{con}">
+					</div>
+					<div class="mb-3">
+						<label for="txtInl" class="form-label">Inteligência:</label>
+						<input type="text" class="form-control"
+							id="txtInl" th:field="*{inl}">
+					</div>
+					<div class="mb-3">
+						<label for="txtWis" class="form-label">Sabedoria:</label>
+						<input type="text" class="form-control"
+							id="txtWis" th:field="*{wis}">
+					</div>
+					<div class="mb-3">
+						<label for="txtCha" class="form-label">Carisma:</label>
+						<input type="text" class="form-control"
+							id="txtCha" th:field="*{cha}">
+					</div>
+					<div class="mb-3">
+						<label for="txtArmor" class="form-label">Armadura:</label>
+						<input type="text" class="form-control"
+							id="txtArmor" th:field="*{armor}">
+					</div>
+					<div class="mb-3">
+						<label for="txtHptotal" class="form-label">Pontos de Vida Totais:</label>
+						<input type="text" class="form-control"
+							id="txtHptotal" th:field="*{hptotal}">
+					</div>
+					<div class="mb-3">
+						<label for="txtHpatual" class="form-label">Pontos de Vida Atuais:</label>
+						<input type="text" class="form-control"
+							id="txtHpatual" th:field="*{hpatual}">
+					</div>
+					<div class="mb-3">
+						<label for="txtArma" class="form-label">Armas:</label>
+						<input type="text" class="form-control"
+							id="txtArma" th:field="*{arma}">
+					</div>
+					<div class="mb-3">
+						<label for="txtAtaques" class="form-label">Ataques:</label>
+						<input type="text" class="form-control"
+							id="txtAtaques" th:field="*{ataques}">
+					</div>
+					<div class="mb-3">
+						<label for="txtProfs" class="form-label">Proficiências:</label>
+						<input type="text" class="form-control"
+							id="txtProfs" th:field="*{profs}">
+					</div>
+					<div class="mb-3">
+						<label for="txtMagias" class="form-label">Magias:</label>
+						<input type="text" class="form-control"
+							id="txtMagias" th:field="*{magias}">
+					</div>
+					<div class="mb-3">
+						<label for="txtInvent" class="form-label">Inventário:</label>
+						<input type="text" class="form-control"
+							id="txtInvent" th:field="*{invent}">
+					</div>
+					<button type="submit" class="btn btn-primary">Salvar</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
